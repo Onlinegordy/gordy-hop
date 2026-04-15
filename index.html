@@ -26,41 +26,40 @@
 .wk-btn{flex:0 0 auto;padding:8px 12px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--t4);font-family:var(--ff-sub);font-size:12px;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:all 0.15s}
 .wk-btn.active{border:2px solid var(--accent);background:rgba(224,64,208,0.1);color:var(--white)}
 .wk-btn.has-data{background:rgba(224,64,208,0.04);color:var(--accent)}
-.wk-btn.phase2{border-color:#444}
+.wk-btn.phase2{border-color:#333}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin-bottom:6px}
 .alert{margin-top:16px;padding:14px 16px;border-radius:8px;font-size:12px;line-height:1.6;color:var(--t2);background:rgba(224,64,208,0.06);border:1px solid rgba(224,64,208,0.15)}.alert strong{color:var(--accent)}
-/* Session cards */
-.sess{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:10px}
-.sess-day{font-family:var(--ff-head);font-size:20px;letter-spacing:0.04em;margin-bottom:2px}
-.sess-type{font-family:var(--ff-sub);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:8px}
-.sess-title{font-family:var(--ff-sub);font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:8px}
-.sess-block{margin-bottom:10px}
-.sess-block-title{font-family:var(--ff-sub);font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
-.sess-item{font-size:13px;color:var(--t1);line-height:1.6;padding:4px 0;border-bottom:1px solid #1a1a1a}
-.sess-item:last-child{border:none}
-.sess-note{font-size:11px;color:var(--t4);font-style:italic;margin-top:6px}
-.sess-check{width:32px;height:32px;border-radius:6px;border:2px solid var(--border);background:transparent;color:transparent;font-size:18px;font-weight:700;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;flex-shrink:0;float:right}
-.sess-check.on{border-color:var(--accent);background:var(--accent-lo);color:var(--accent)}
-/* Targets */
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.day-header{padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.day-label{font-family:var(--ff-head);font-size:20px;letter-spacing:0.04em}
+.day-type{font-family:var(--ff-sub);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 10px;border-radius:4px}
+.day-note{padding:0 18px 10px;font-size:11px;color:var(--t4);font-style:italic}
+.sess-part{border-top:1px solid #1f1f1f;padding:14px 18px}
+.sess-part-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sess-part-title{font-family:var(--ff-sub);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent)}
+.sess-part-tag{font-family:var(--ff-sub);font-size:10px;color:var(--t4);text-transform:uppercase;letter-spacing:0.06em}
+.tick-btn{width:34px;height:34px;border-radius:6px;border:2px solid var(--border);background:transparent;color:transparent;font-size:18px;font-weight:700;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tick-btn.on{border-color:var(--accent);background:var(--accent-lo);color:var(--accent)}
+.ex-row{font-size:13px;color:var(--t1);line-height:1.6;padding:5px 0;border-bottom:1px solid #161616}
+.ex-row:last-child{border:none}
+.ex-row b{color:var(--white)}
+.ex-note{font-size:11px;color:var(--t4);font-style:italic;padding:2px 0 0 0}
+.phase-banner{padding:14px 18px;border-radius:10px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.phase-banner.p1{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15)}
+.phase-banner.p2{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15)}
+.phase-title{font-family:var(--ff-head);font-size:20px;letter-spacing:0.04em}
+.phase-sub{font-family:var(--ff-sub);font-size:12px;color:var(--t3);text-transform:uppercase;letter-spacing:0.04em}
 .target-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:24px}
 .target-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
 .target-label{font-family:var(--ff-sub);font-size:11px;color:var(--t4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
-.target-current{font-family:var(--ff-head);font-size:20px;color:var(--t3);letter-spacing:0.02em}
+.target-current{font-family:var(--ff-head);font-size:20px;color:var(--t3)}
 .target-arrow{font-size:14px;color:var(--accent);margin:4px 0}
-.target-goal{font-family:var(--ff-head);font-size:28px;color:var(--accent);letter-spacing:0.02em}
-.target-unit{font-family:var(--ff-sub);font-size:10px;color:var(--t4);letter-spacing:0.04em}
-/* Phase banner */
-.phase-banner{padding:14px 18px;border-radius:10px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.phase-banner.p1{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15)}
-.phase-banner.p2{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15)}
-.phase-icon{font-size:24px}
-.phase-title{font-family:var(--ff-head);font-size:20px;letter-spacing:0.04em}
-.phase-sub{font-family:var(--ff-sub);font-size:12px;color:var(--t3);text-transform:uppercase;letter-spacing:0.04em}
-/* Overview */
+.target-goal{font-family:var(--ff-head);font-size:28px;color:var(--accent)}
+.target-unit{font-family:var(--ff-sub);font-size:10px;color:var(--t4)}
 .overview{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:6px;margin-top:16px}
 .ov-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center}
 .ov-wk{font-family:var(--ff-sub);font-size:10px;color:var(--t4);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px}
-.ov-pct{font-family:var(--ff-head);font-size:22px;letter-spacing:0.02em}
+.ov-pct{font-family:var(--ff-head);font-size:22px}
 .ov-bar-bg{height:3px;border-radius:2px;background:#1f1f1f;margin-top:4px;overflow:hidden}
 .ov-bar{height:100%;border-radius:2px}
 .form-label{display:block;font-family:var(--ff-sub);font-size:11px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
@@ -77,249 +76,335 @@
   <p class="subtitle">Gordy Elliott — Turf Games (June) + Ultra 40mi (12 Sept)</p>
   <div class="brand-line">SHIFT PROGRAMME</div>
 </div></div>
-
 <nav class="nav"><div class="nav-inner" id="nav">
   <button class="nav-btn active" data-tab="week">THIS WEEK</button>
   <button class="nav-btn" data-tab="targets">TARGETS</button>
   <button class="nav-btn" data-tab="overview">OVERVIEW</button>
   <button class="nav-btn" data-tab="log">TRAINING LOG</button>
 </div></nav>
-
 <div class="container">
-
 <div class="section active" id="sec-week">
   <h2 class="h2">WEEKLY PROGRAMME</h2>
-  <p class="p-intro">Your sessions for the week. Tick off as you complete. Sessions adapt across the 21-week programme.</p>
+  <p class="p-intro">Each day has sessions you can tick off independently. Double days have AM and PM split.</p>
   <div class="wk-sel" id="week-sel"></div>
   <div id="phase-banner"></div>
   <div id="week-sessions"></div>
 </div>
-
 <div class="section" id="sec-targets">
   <h2 class="h2">PERFORMANCE TARGETS</h2>
-  <p class="p-intro">Where you are now vs where you need to be. Phase 1 targets are for Turf Games. Phase 2 shifts to ultra endurance.</p>
+  <p class="p-intro">Current vs goal. Phase 1 for Turf Games, Phase 2 shifts to ultra.</p>
   <div id="targets-content"></div>
 </div>
-
 <div class="section" id="sec-overview">
   <h2 class="h2">21-WEEK OVERVIEW</h2>
-  <p class="p-intro">Weeks 1–10: Turf Games. Weeks 11–21: Ultra prep. Tick your sessions to see completion build.</p>
+  <p class="p-intro">Weeks 1–10: Turf Games. Weeks 11–21: Ultra. Tick sessions to build completion.</p>
   <div id="overview-content"></div>
 </div>
-
 <div class="section" id="sec-log">
   <h2 class="h2">TRAINING LOG</h2>
-  <p class="p-intro">Record your numbers. Lifts, times, distances, how you felt. This is your data.</p>
+  <p class="p-intro">Record your numbers. Lifts, times, distances, how you felt.</p>
   <div class="wk-sel" id="log-wk-sel"></div>
   <div id="log-form"></div>
 </div>
-
 </div>
-
 <div class="footer">SHIFT PROGRAMME<br><span style="color:var(--t5);text-transform:none;font-family:var(--ff-body)">Turf Games June 2026 · Ultra 40mi 12 Sept 2026</span></div>
 
 <script>
-const TOTAL_WEEKS=21; // 10 Turf Games + 11 Ultra
-const SK="gordy-sessions",LK="gordy-log";
+const TW=21;
+const SK="gordy2-sess",LK="gordy2-log";
 const ld=k=>{try{return JSON.parse(localStorage.getItem(k))||{};}catch{return {};}};
 const sv=(k,d)=>{try{localStorage.setItem(k,JSON.stringify(d));}catch{}};
 let sessData=ld(SK),logData=ld(LK);
 let curWeek=0,logWeek=0;
-
-function isPhase2(w){return w>=10;}
+function isP2(w){return w>=10;}
 function getColor(p){return p>=1?"#22c55e":p>=0.7?"#22c55e":p>=0.4?"#FFB020":"#ef4444";}
 
-// ─── PROGRAMME GENERATOR ───────────────────────
-function getWeekSessions(w){
-  const p2=isPhase2(w);
-  const block=p2?w-10:w; // 0-indexed within phase
+// ─── SESSION GENERATOR ─────────────────────
+// Each day returns {day, type, color, bg, parts:[], note}
+// Each part: {title, tag, items:[], note?}
+// parts get individual tick-offs
 
-  if(!p2){
-    // PHASE 1: TURF GAMES — 10 weeks
-    // Periodisation: weeks 0-3 base, 4-7 build, 8 peak, 9 taper
-    const phase=block<=3?"BASE":block<=7?"BUILD":block===8?"PEAK":"TAPER";
-    const sqInt=phase==="BASE"?"5x5 @ 75%":phase==="BUILD"?"5x3 @ 82-88%":phase==="PEAK"?"3x2 @ 90%+":"3x3 @ 75% (easy)";
-    const cjInt=phase==="BASE"?"5x3 @ 70-75%":phase==="BUILD"?"6x2 @ 80-85%":phase==="PEAK"?"Work to heavy single":"5x2 @ 70% (sharp)";
-    const runVol=phase==="BASE"?"5k easy pace":phase==="BUILD"?"5k with 4x800m @ 3:50/km":phase==="PEAK"?"5k time trial":"3k easy shakeout";
-    const ergInt=phase==="BASE"?"5x500m @ 1:50, 90s rest":phase==="BUILD"?"8x500m @ 1:45, 75s rest":phase==="PEAK"?"4x500m @ 1:40, 2min rest":"3x500m @ 1:50 easy";
-    const z2Run=phase==="TAPER"?"30 min easy":"40-50 min @ 5:30-5:50/km";
-    const condWod=phase==="BASE"?"3 rounds: 15 cal row + 12 wall balls + 9 burpees":phase==="BUILD"?"5 rounds: 12 cal row + 10 thrusters (40kg) + 8 box jumps":phase==="PEAK"?"Turf Games simulation WOD":"Light metcon 10 min easy";
+function p1Sessions(w){
+  // w = 0-9, front squat starts at 100x3, C&J at 100
+  // More aggressive: jumping 2-3% per week on key lifts
+  const fsq=[
+    "5x3 @ 82.5kg","5x3 @ 85kg","4x3 @ 87.5kg","4x3 @ 90kg",
+    "5x2 @ 92.5kg","5x2 @ 95kg","4x2 @ 100kg","3x2 @ 105kg",
+    "Work to 110+ single, then 2x2 @ 100","3x3 @ 85kg (sharp, fast)"
+  ][w];
+  const cj=[
+    "6x2 @ 80kg","6x2 @ 82.5kg","5x2 @ 85kg","5x2 @ 87.5kg",
+    "5x2 @ 90kg","4x2 @ 95kg, 2x1 @ 100","4x1 @ 100-105","3x1 @ 105-110",
+    "Work to heavy single — target 110-115","5x1 @ 90kg (snappy)"
+  ][w];
+  const cp=[
+    "3x3 @ 110kg","3x3 @ 112.5kg","3x3 @ 115kg","3x2 @ 120kg",
+    "3x2 @ 120kg","3x2 @ 125kg","3x2 @ 125kg","2x2 @ 130kg",
+    "2x1 @ 130-135kg","3x2 @ 110kg (speed)"
+  ][w];
+  const bench=[
+    "4x6 @ 70%","4x5 @ 72.5%","4x5 @ 75%","4x4 @ 77.5%",
+    "5x4 @ 80%","5x3 @ 82.5%","4x3 @ 85%","4x2 @ 87.5%",
+    "3x2 @ 90%","3x5 @ 70% (speed)"
+  ][w];
+  const ergInt=[
+    "6x500m @ 1:48, 90s rest","6x500m @ 1:46, 90s rest","7x500m @ 1:45, 80s rest","7x500m @ 1:44, 80s rest",
+    "8x500m @ 1:43, 75s rest","8x500m @ 1:42, 75s rest","6x500m @ 1:40, 90s rest","4x500m @ 1:38, 2min rest + 2k test",
+    "5x500m @ 1:38, 90s rest","3x500m @ 1:45, easy"
+  ][w];
+  const isTaper=w===9;
+  const isPeak=w===8;
 
-    return [
-      {day:"MONDAY",type:"STRENGTH + RUN",color:"var(--c-str)",bg:"var(--c-str-bg)",blocks:[
-        {title:"STRENGTH — FRONT SQUAT",items:[`Front Squat: ${sqInt}`,`Pause Front Squat: 3x3 @ 65% (2sec pause)`,`Bulgarian Split Squat: 3x10 each`]},
-        {title:"RUN — SPEED WORK",items:[runVol]},
-      ],note:`Phase: ${phase} · Week ${block+1}/10`},
-      {day:"TUESDAY",type:"OLYMPIC LIFTING",color:"var(--c-str)",bg:"var(--c-str-bg)",blocks:[
-        {title:"CLEAN & JERK",items:[`Clean & Jerk: ${cjInt}`,`Clean Pulls: 3x3 @ 90-100%`,`Front Rack Lunges: 3x8 each`]},
-        {title:"ACCESSORY",items:["Strict Press: 4x6","Barbell Row: 4x8","Core: 3 rounds — 15 GHD sit-ups + 30s L-sit hold"]},
-      ],note:`C&J target: 110-115kg by week 10`},
-      {day:"WEDNESDAY",type:"RUN — ZONE 2",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"AEROBIC BASE",items:[z2Run,"Keep heart rate 130-145 BPM","Nose breathing where possible"]},
-      ],note:"This builds the engine for everything else"},
-      {day:"THURSDAY",type:"STRENGTH + ERG",color:"var(--c-erg)",bg:"var(--c-erg-bg)",blocks:[
-        {title:"STRENGTH — PUSH/PULL",items:["Bench Press: 4x6","Weighted Pull-ups: 4x6","DB Shoulder Press: 3x10","Pendlay Row: 3x8"]},
-        {title:"ERG INTERVALS",items:[ergInt]},
-      ],note:"Double session day — split AM/PM if possible"},
-      {day:"FRIDAY",type:"CONDITIONING",color:"var(--c-cf)",bg:"var(--c-cf-bg)",blocks:[
-        {title:"MIXED MODAL CONDITIONING",items:[condWod]},
-        {title:"SKILL WORK",items:["15 min: work weaknesses — muscle-ups, handstand walks, or double-unders"]},
-      ],note:"Competition simulation — push the pace"},
-      {day:"SATURDAY",type:"PADEL + CF CLASS",color:"var(--c-padel)",bg:"var(--c-padel-bg)",blocks:[
-        {title:"PADEL",items:["Regular session — enjoy it, this is active recovery"]},
-        {title:"CROSSFIT CLASS",items:["Follow the class programming","Scale to hit the intended stimulus"]},
-      ],note:"Social training day — padel + class"},
-      {day:"SUNDAY",type:"REST",color:"var(--c-rest)",bg:"var(--c-rest-bg)",blocks:[
-        {title:"FULL REST",items:["Walk the dog","Mobility / stretching if you feel like it","Eat well, sleep well"]},
-      ],note:"Non-negotiable recovery day"},
-    ];
-  } else {
-    // PHASE 2: ULTRA — 11 weeks
-    // block 0-3: transition + base miles, 4-7: build long runs, 8-9: peak volume, 10: taper
-    const uPhase=block<=3?"TRANSITION":block<=7?"BUILD":block<=9?"PEAK":"TAPER";
-    const longRun=block<=1?"10-12 miles easy":block<=3?"14-16 miles":block<=5?"18-22 miles":block<=7?"24-28 miles":block<=9?"30-34 miles":"10 miles easy";
-    const midRun=block<=3?"6-8 miles":block<=7?"8-10 miles":block<=9?"10-12 miles":"5 miles easy";
-    const easyRun=uPhase==="TAPER"?"3-4 miles easy":"5-6 miles easy pace";
-    const trailNote=block<=3?"Start getting on trails 1x per week":"Long run should be on trails whenever possible";
+  return [
+    // MONDAY — STRENGTH + RUN
+    {day:"MONDAY",type:"STRENGTH + RUN",color:"var(--c-str)",bg:"var(--c-str-bg)",parts:[
+      {title:"STRENGTH — FRONT SQUAT",tag:"AM OR SINGLE SESSION",items:[
+        `<b>Front Squat:</b> ${fsq}`,
+        `<b>Pause Front Squat:</b> 3x3 @ ${w<5?"65%":"70%"} — 2 sec hold in the hole`,
+        `<b>Bulgarian Split Squat:</b> 3x10 each leg, DB in each hand`,
+        `<b>Hanging Knee Raise:</b> 3x15`
+      ]},
+      {title:"RUN — SPEED DEVELOPMENT",tag:isTaper?"EASY SHAKEOUT":"INTERVALS",items:isTaper?[
+        `<b>Easy 3km shakeout.</b> Keep it conversational. Legs turning over, nothing more.`,
+        `Pace: 5:30-6:00/km. This is active recovery with purpose.`
+      ]:[
+        w<4?`<b>5x800m @ ${["3:52","3:50","3:48","3:45"][w]}/km.</b> 2 min walk/jog recovery between reps.`
+            :`<b>${w<7?"6":"4"}x800m @ ${["3:42","3:40","3:38","3:35","3:35","3:35"][w-4]}/km.</b> 90s jog recovery.`,
+        `<b>Warm-up:</b> 10 min easy jog + 4x100m strides building to 80% effort.`,
+        `<b>Cool-down:</b> 5 min easy jog. Don't skip this.`,
+        `<b>Feel:</b> ${w<4?"Controlled and repeatable — you should finish thinking you could do 2 more":"Hard but composed — last 2 reps should be a fight but not a death march"}.`
+      ]},
+    ],note:`Week ${w+1}/10 · Front Squat target: 115+ x 3`},
 
-    return [
-      {day:"MONDAY",type:"EASY RUN + STRENGTH",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"RUN",items:[`${easyRun} @ conversational pace`]},
-        {title:"MAINTENANCE STRENGTH",items:["Goblet Squat: 3x12","RDL: 3x10","Single Leg Glute Bridge: 3x12 each","Core: 3x30s plank + 3x10 dead bugs"]},
-      ],note:`Ultra Phase: ${uPhase} · Week ${block+1}/11`},
-      {day:"TUESDAY",type:"MID-DISTANCE RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"STEADY RUN",items:[`${midRun} @ 5:20-5:40/km`,`Include 2-3 hills if available`]},
-      ],note:"Building weekly volume"},
-      {day:"WEDNESDAY",type:"EASY RUN OR REST",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"RECOVERY",items:[easyRun,"Or full rest if legs are heavy","Listen to your body — ultra training is about consistency not heroics"]},
-      ],note:"Optional — skip if fatigued"},
-      {day:"THURSDAY",type:"TEMPO / HILLS",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"QUALITY SESSION",items:[uPhase==="TAPER"?"4x1 min pickups during easy run":`${block<=3?"4x5 min @ 5:00/km, 2 min jog":"6x5 min @ 4:50/km, 90s jog"}`,`${block>3?"OR hill repeats: 8-10x60s hard uphill, jog down":""}`]},
-        {title:"STRENGTH",items:["Step-ups: 3x10 each","Calf raises: 3x15","Nordic curls: 3x6","Banded lateral walks: 3x12 each"]},
-      ],note:"The one hard session per week"},
-      {day:"FRIDAY",type:"REST OR EASY",color:"var(--c-rest)",bg:"var(--c-rest-bg)",blocks:[
-        {title:"PRE-LONG RUN",items:["Full rest or very easy 20 min jog","Prep kit and nutrition for Saturday long run","Hydrate well"]},
-      ],note:"Save your legs for tomorrow"},
-      {day:"SATURDAY",type:"LONG RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",blocks:[
-        {title:"LONG RUN — THE KEY SESSION",items:[longRun,trailNote,"Practice race nutrition every 45 min (gels, bars, electrolytes)","Start slow — finish strong","Walk uphills if needed — this is ultra strategy"]},
-      ],note:"This is the most important session of the week"},
-      {day:"SUNDAY",type:"REST",color:"var(--c-rest)",bg:"var(--c-rest-bg)",blocks:[
-        {title:"FULL REST",items:["Walk the dog","Foam roll / stretch","Refuel properly — protein + carbs"]},
-      ],note:"Recover from the long run"},
-    ];
-  }
+    // TUESDAY — OLYMPIC LIFTING
+    {day:"TUESDAY",type:"OLYMPIC LIFTING",color:"var(--c-str)",bg:"var(--c-str-bg)",parts:[
+      {title:"CLEAN & JERK",tag:"PRIMARY",items:[
+        `<b>Clean & Jerk:</b> ${cj}`,
+        `<b>Clean Pulls:</b> ${cp}`,
+        `<b>Front Rack Lunges:</b> 3x8 each @ ${w<5?"40kg":"50kg"}`,
+      ]},
+      {title:"ACCESSORY",tag:"SECONDARY",items:[
+        `<b>Strict Press:</b> 4x${w<5?"6":"5"} — build across sets`,
+        `<b>Pendlay Row:</b> 4x${w<5?"8":"6"} — heavy, controlled`,
+        `<b>Core:</b> 3 rounds — 15 GHD sit-ups + 30s L-sit hold`,
+      ]},
+    ],note:`C&J target: 110-115kg · Current: 100kg`},
+
+    // WEDNESDAY — ZONE 2
+    {day:"WEDNESDAY",type:"ZONE 2 RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:"AEROBIC ENGINE",tag:"EASY EFFORT",items:[
+        `<b>${isTaper?"30":"40+50".split("+")[w<5?0:1]} min continuous run</b> @ ${w<3?"5:45":"5:30"}-5:50/km.`,
+        `<b>Heart rate:</b> Stay 130-145 BPM. If HR drifts above 150, slow down.`,
+        `<b>Breathing:</b> Nose breathing as much as possible. If you can't hold a conversation, you're too fast.`,
+        `<b>Terrain:</b> Flat to gentle hills. This is not a hard session — it's building your aerobic base which fuels everything else.`,
+        w>=5?`<b>Add 10 min tempo finish @ 5:00/km</b> in the last 10 min for the final km. Controlled push.`:"",
+      ].filter(Boolean)},
+    ],note:"This is the session most people skip. Don't. It's building your 5k and your ultra engine simultaneously."},
+
+    // THURSDAY — STRENGTH + ERG (DOUBLE)
+    {day:"THURSDAY",type:"STRENGTH + ERG",color:"var(--c-erg)",bg:"var(--c-erg-bg)",parts:[
+      {title:"STRENGTH — UPPER PUSH/PULL",tag:"AM SESSION",items:[
+        `<b>Bench Press:</b> ${bench}`,
+        `<b>Weighted Pull-ups:</b> ${w<5?"4x6":"5x4"} — add weight each week`,
+        `<b>DB Shoulder Press:</b> 3x10`,
+        `<b>Barbell Row:</b> 3x8 — ${w<5?"moderate":"heavy"}`,
+      ]},
+      {title:"ERG INTERVALS",tag:"PM SESSION",items:[
+        `<b>${ergInt}</b>`,
+        `<b>Warm-up:</b> 5 min easy row, then 3x10 strokes building effort.`,
+        w===7?`<b>END WITH 2K TEST.</b> After intervals, rest 5 min, then all-out 2k. Record your time.`:"",
+        `<b>Focus:</b> ${w<5?"Consistent splits — same pace every rep. Don't fly and die.":"Negative split if you can — start controlled, finish fast."}`,
+        `<b>Damper:</b> 5-6. Don't go higher thinking it'll make you faster.`,
+      ].filter(Boolean)},
+    ],note:"Split AM/PM if possible. If single session, do strength first, 10 min rest, then erg."},
+
+    // FRIDAY — CONDITIONING
+    {day:"FRIDAY",type:"CONDITIONING",color:"var(--c-cf)",bg:"var(--c-cf-bg)",parts:[
+      {title:"MIXED MODAL WOD",tag:isPeak?"COMPETITION SIM":"CONDITIONING",items:[
+        w<3?`<b>3 rounds for time:</b> 15 cal row + 12 wall balls (9kg) + 9 burpees. Target: sub 8 min.`
+          :w<6?`<b>5 rounds for time:</b> 12 cal row + 10 thrusters (42.5kg) + 8 box jumps (24"). Target: sub 12 min.`
+          :w<8?`<b>For time:</b> 30 cal row, 20 C&J @ 60kg, 30 cal row, 20 thrusters @ 50kg, 30 cal row.`
+          :isPeak?`<b>TURF GAMES SIMULATION:</b> Design a mock event — 1km run, then max C&J in 3 min, then 2k row for time. Full gas. Treat this like race day.`
+          :`<b>10 min easy:</b> 3 rounds — 10 cal row + 10 KB swings (24kg) + 10 air squats. Move well, stay loose.`,
+      ]},
+      {title:"SKILL WORK",tag:"15 MINUTES",items:[
+        `<b>Pick your weaknesses:</b> Muscle-ups, handstand walks, double-unders, rope climbs.`,
+        `Practice, don't grind. Quality reps only.`,
+      ]},
+    ],note:isPeak?"Peak week — go full send today. This is your dress rehearsal.":isTaper?"Stay sharp, don't burn yourself out.":"Push the pace — this is where fitness meets grit."},
+
+    // SATURDAY
+    {day:"SATURDAY",type:"PADEL + CF CLASS",color:"var(--c-padel)",bg:"var(--c-padel-bg)",parts:[
+      {title:"PADEL",tag:"SESSION 1",items:["Regular padel session. Enjoy it — this is play, not training."]},
+      {title:"CROSSFIT CLASS",tag:"SESSION 2",items:["Follow class programming. Scale to hit intended stimulus.","Don't ego lift in class the day before rest day."]},
+    ],note:"Social training day. Keep intensity moderate."},
+
+    // SUNDAY
+    {day:"SUNDAY",type:"REST",color:"var(--c-rest)",bg:"var(--c-rest-bg)",parts:[
+      {title:"FULL REST",tag:"RECOVERY",items:["Walk the dog. Mobility if you feel like it.","Eat well. Sleep well. You grow on rest days, not training days."]},
+    ],note:"Non-negotiable."},
+  ];
 }
+
+function p2Sessions(w){
+  const b=w-10; // 0-10 within phase 2
+  const longRun=["10-12 mi easy","12-14 mi, include trails","14-16 mi, practice nutrition","16-18 mi trail run","18-20 mi, eat every 45 min","22-24 mi, walk/run uphills","24-26 mi, race pace practice","28-30 mi peak long run","30-34 mi — longest pre-race","22-24 mi easy cutback","8-10 mi easy"][b];
+  const midRun=b<=3?"6-8 mi":b<=7?"8-10 mi":b<=9?"10-12 mi":"5 mi easy";
+  const easyRun=b>=10?"3-4 mi very easy":"5-6 mi easy";
+  const tempo=b<=3?"4x5 min @ 5:00/km, 2 min jog":b<=7?"5x6 min @ 4:55/km, 90s jog":b<=9?"3x10 min @ 5:00/km, 2 min jog":"4x3 min @ 5:00/km, easy";
+  const isTaper=b>=10;
+
+  return [
+    {day:"MONDAY",type:"EASY RUN + STRENGTH",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:"EASY RUN",tag:"AM",items:[
+        `<b>${easyRun}</b> @ conversational pace (5:40-6:00/km).`,
+        `Keep this genuinely easy. You're recovering from the long run.`,
+      ]},
+      {title:"MAINTENANCE STRENGTH",tag:"PM OR AFTER RUN",items:[
+        `<b>Goblet Squat:</b> 3x12`,`<b>RDL:</b> 3x10`,`<b>Single Leg Glute Bridge:</b> 3x12 each`,
+        `<b>Core:</b> 3x30s plank + 3x10 dead bugs`,`<b>Calf Raises:</b> 3x15 — injury prevention`,
+      ]},
+    ],note:`Ultra Phase · Week ${b+1}/11 · Strength is maintenance only now`},
+
+    {day:"TUESDAY",type:"MID-DISTANCE RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:"STEADY STATE",tag:"SINGLE SESSION",items:[
+        `<b>${midRun}</b> @ 5:20-5:40/km.`,
+        `Include 2-3 hills if available. Practice running effort not pace on inclines.`,
+        `<b>Feel:</b> Comfortably hard. You could talk in short sentences but wouldn't want to.`,
+      ]},
+    ],note:"Building weekly volume. Consistent effort > fast splits."},
+
+    {day:"WEDNESDAY",type:isTaper?"REST":"EASY RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:isTaper?"REST DAY":"RECOVERY RUN",tag:isTaper?"RECOVERY":"EASY",items:isTaper?["Full rest. Trust the training."]:[
+        `<b>${easyRun}</b> @ very easy pace. Genuinely slow.`,
+        `Skip this if legs are heavy. Missing one easy run won't hurt. Running on dead legs will.`,
+      ]},
+    ],note:isTaper?"Taper — less is more.":"Optional. Listen to your body."},
+
+    {day:"THURSDAY",type:"QUALITY SESSION",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:"TEMPO / HILLS",tag:"THE HARD ONE",items:[
+        `<b>${tempo}</b>`,
+        `<b>Warm-up:</b> 10 min easy + 4 strides.`,
+        `<b>Cool-down:</b> 10 min easy.`,
+        `${b>3&&!isTaper?"<b>Alternative:</b> 8-10x60s hard uphill, jog back down. Same aerobic benefit, less impact.":""}`,
+        `<b>Feel:</b> This is the one session per week you push. Everything else is easy or long.`,
+      ].filter(Boolean)},
+      {title:"STRENGTH",tag:"POST-RUN",items:[
+        `<b>Step-ups:</b> 3x10 each — mimic trail climbing`,
+        `<b>Nordic Curls:</b> 3x6 — hamstring injury prevention`,
+        `<b>Banded Lateral Walks:</b> 3x12 each`,
+        `<b>Single Leg Calf Raise:</b> 3x12 each`,
+      ]},
+    ],note:"One quality session per week. That's all you need in ultra prep."},
+
+    {day:"FRIDAY",type:"REST",color:"var(--c-rest)",bg:"var(--c-rest-bg)",parts:[
+      {title:"PRE-LONG RUN",tag:"FULL REST",items:[
+        `Rest. Prep your kit, nutrition, and route for tomorrow.`,
+        `Hydrate well. Carb up slightly at dinner.`,
+        `${b>=4?"<b>Kit check:</b> Pack gels/bars, electrolytes, waterproof, phone, route loaded.":""}`,
+      ].filter(Boolean)},
+    ],note:"Save everything for Saturday."},
+
+    {day:"SATURDAY",type:"LONG RUN",color:"var(--c-run)",bg:"var(--c-run-bg)",parts:[
+      {title:"THE KEY SESSION",tag:"LONG RUN",items:[
+        `<b>${longRun}</b>`,
+        `<b>Pace:</b> Start at 6:00/km+. The first 30 min should feel too easy. Negative split the back half.`,
+        `<b>Nutrition:</b> Eat every 45 min from the start. Don't wait until you're hungry — it's too late by then. Practice with what you'll use on race day.`,
+        `<b>Terrain:</b> ${b>=2?"Trails whenever possible. Walk the uphills — this IS ultra strategy, not weakness.":"Road is fine for now. Get on trails from week 3+."}`,
+        `<b>Walk breaks:</b> ${b>=4?"Run 25 min, walk 5 min. Or walk all uphills. Find your rhythm — this is how you'll race.":"Optional. Don't be a hero — the goal is finishing the distance."}`,
+        `<b>Post-run:</b> Protein + carbs within 30 min. Stretch. Foam roll. You earned it.`,
+      ]},
+    ],note:b>=7?"PEAK VOLUME — this is the biggest session of the programme. Respect the distance.":"This is where ultra fitness is built. Everything else supports this session."},
+
+    {day:"SUNDAY",type:"REST",color:"var(--c-rest)",bg:"var(--c-rest-bg)",parts:[
+      {title:"FULL REST",tag:"RECOVERY",items:["Walk the dog. Foam roll. Refuel. Sleep.","Your body adapts on rest days, not training days."]},
+    ],note:"Non-negotiable."},
+  ];
+}
+
+function getSessions(w){return isP2(w)?p2Sessions(w):p1Sessions(w);}
+
+// Count total tickable parts per week
+function weekPartCount(w){let c=0;getSessions(w).forEach(d=>{c+=d.parts.length;});return c;}
+function weekDoneCount(w){let c=0;getSessions(w).forEach((d,di)=>{d.parts.forEach((_,pi)=>{if(sessData[w+"-"+di+"-"+pi])c++;});});return c;}
+function weekPct(w){const t=weekPartCount(w);return t>0?weekDoneCount(w)/t:0;}
 
 // ─── NAV ───────────────────────────────────
-document.getElementById("nav").addEventListener("click",e=>{const b=e.target.closest(".nav-btn");if(!b)return;document.querySelectorAll(".nav-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));document.getElementById("sec-"+b.dataset.tab).classList.add("active");});
+document.getElementById("nav").addEventListener("click",e=>{const b=e.target.closest(".nav-btn");if(!b)return;document.querySelectorAll(".nav-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));document.getElementById("sec-"+b.dataset.tab).classList.add("active");if(b.dataset.tab==="overview")renderOverview();});
 
 // ─── THIS WEEK ─────────────────────────────
-function weekCompPct(w){const sess=getWeekSessions(w);let done=0;sess.forEach((_,i)=>{if(sessData[w+"-"+i])done++;});return done/sess.length;}
-
 function renderWeekSel(){
   const el=document.getElementById("week-sel");el.innerHTML="";
-  for(let i=0;i<TOTAL_WEEKS;i++){
-    const p=weekCompPct(i);const has=p>0;
-    const p2=isPhase2(i);
-    const cls=i===curWeek?"active":has?"has-data":"";
-    const label=p2?`U${i-9}`:`TG${i+1}`;
-    el.innerHTML+=`<button class="wk-btn ${cls} ${p2?"phase2":""}" data-cw="${i}">${label}</button>`;
-  }
+  for(let i=0;i<TW;i++){const p=weekPct(i);const has=p>0;const p2=isP2(i);const cls=i===curWeek?"active":has?"has-data":"";
+  const label=p2?`U${i-9}`:`TG${i+1}`;
+  el.innerHTML+=`<button class="wk-btn ${cls} ${p2?"phase2":""}" data-cw="${i}">${label}${p>=1?" ✓":""}</button>`;}
 }
-
 function renderPhaseBanner(){
-  const el=document.getElementById("phase-banner");
-  const p2=isPhase2(curWeek);
-  if(!p2){
-    const block=curWeek;
-    const phase=block<=3?"BASE BUILD":block<=7?"INTENSITY":block===8?"PEAK WEEK":"TAPER";
-    el.innerHTML=`<div class="phase-banner p1"><div class="phase-icon">🏋️</div><div><div class="phase-title">PHASE 1 — TURF GAMES</div><div class="phase-sub">Week ${curWeek+1}/10 · ${phase} · Target: Late June 2026</div></div></div>`;
-  } else {
-    const block=curWeek-10;
-    const phase=block<=3?"BASE MILES":block<=7?"VOLUME BUILD":block<=9?"PEAK VOLUME":"TAPER";
-    el.innerHTML=`<div class="phase-banner p2"><div class="phase-icon">🏔️</div><div><div class="phase-title">PHASE 2 — ULTRA 40MI</div><div class="phase-sub">Week ${block+1}/11 · ${phase} · Race: 12 Sept 2026</div></div></div>`;
-  }
+  const el=document.getElementById("phase-banner");const p2=isP2(curWeek);
+  if(!p2){const b=curWeek;const phase=b<=3?"BASE BUILD":b<=7?"INTENSITY":b===8?"PEAK":"TAPER";
+  el.innerHTML=`<div class="phase-banner p1"><div style="font-size:24px">🏋️</div><div><div class="phase-title">PHASE 1 — TURF GAMES</div><div class="phase-sub">Week ${b+1}/10 · ${phase} · Late June 2026</div></div></div>`;}
+  else{const b=curWeek-10;const phase=b<=3?"BASE MILES":b<=7?"VOLUME BUILD":b<=9?"PEAK":"TAPER";
+  el.innerHTML=`<div class="phase-banner p2"><div style="font-size:24px">🏔️</div><div><div class="phase-title">PHASE 2 — ULTRA 40MI</div><div class="phase-sub">Week ${b+1}/11 · ${phase} · 12 Sept 2026</div></div></div>`;}
 }
-
-function renderWeekSessions(){
-  const el=document.getElementById("week-sessions");
-  const sessions=getWeekSessions(curWeek);
-  let h="";
-  sessions.forEach((s,i)=>{
-    const done=sessData[curWeek+"-"+i];
-    h+=`<div class="sess" style="border-left:3px solid ${s.color}">
-      <button class="sess-check ${done?"on":""}" data-si="${i}">${done?"✓":""}</button>
-      <div class="sess-day">${s.day}</div>
-      <span class="sess-type" style="background:${s.bg};color:${s.color}">${s.type}</span>`;
-    s.blocks.forEach(b=>{
-      h+=`<div class="sess-block"><div class="sess-block-title">${b.title}</div>`;
-      b.items.forEach(item=>{if(item)h+=`<div class="sess-item">${item}</div>`;});
+function renderSessions(){
+  const el=document.getElementById("week-sessions");const sessions=getSessions(curWeek);let h="";
+  sessions.forEach((d,di)=>{
+    h+=`<div class="day-card" style="border-left:3px solid ${d.color}">
+      <div class="day-header"><div class="day-label">${d.day}</div><span class="day-type" style="background:${d.bg};color:${d.color}">${d.type}</span></div>`;
+    if(d.note)h+=`<div class="day-note">${d.note}</div>`;
+    d.parts.forEach((p,pi)=>{
+      const key=curWeek+"-"+di+"-"+pi;const done=sessData[key];
+      h+=`<div class="sess-part"><div class="sess-part-header"><div><span class="sess-part-title">${p.title}</span><span class="sess-part-tag" style="margin-left:8px">${p.tag}</span></div><button class="tick-btn ${done?"on":""}" data-di="${di}" data-pi="${pi}">${done?"✓":""}</button></div>`;
+      p.items.forEach(item=>{h+=`<div class="ex-row">${item}</div>`;});
       h+=`</div>`;
     });
-    if(s.note)h+=`<div class="sess-note">${s.note}</div>`;
     h+=`</div>`;
   });
   el.innerHTML=h;
 }
-
-function renderWeek(){renderWeekSel();renderPhaseBanner();renderWeekSessions();}
+function renderWeek(){renderWeekSel();renderPhaseBanner();renderSessions();}
 document.getElementById("week-sel").addEventListener("click",e=>{const b=e.target.closest(".wk-btn");if(!b)return;curWeek=+b.dataset.cw;renderWeek();});
-document.getElementById("week-sessions").addEventListener("click",e=>{const b=e.target.closest(".sess-check");if(!b)return;const k=curWeek+"-"+b.dataset.si;sessData[k]=!sessData[k];sv(SK,sessData);renderWeek();});
+document.getElementById("week-sessions").addEventListener("click",e=>{const b=e.target.closest(".tick-btn");if(!b)return;const k=curWeek+"-"+b.dataset.di+"-"+b.dataset.pi;sessData[k]=!sessData[k];sv(SK,sessData);renderWeek();});
 renderWeek();
 
 // ─── TARGETS ───────────────────────────────
-(function(){
-  const el=document.getElementById("targets-content");
-  el.innerHTML=`
-  <div class="phase-banner p1"><div class="phase-icon">🏋️</div><div><div class="phase-title">PHASE 1 — TURF GAMES TARGETS</div><div class="phase-sub">10 weeks · Late June 2026</div></div></div>
-  <div class="target-grid">
-    <div class="target-card"><div class="target-label">CLEAN & JERK</div><div class="target-current">100 kg</div><div class="target-arrow">→</div><div class="target-goal">115 KG</div></div>
-    <div class="target-card"><div class="target-label">FRONT SQUAT (3RM)</div><div class="target-current">100 kg</div><div class="target-arrow">→</div><div class="target-goal">115+ KG</div></div>
-    <div class="target-card"><div class="target-label">5K RUN</div><div class="target-current">22:00</div><div class="target-arrow">→</div><div class="target-goal">SUB 20:00</div></div>
-    <div class="target-card"><div class="target-label">2K ROW</div><div class="target-current">7:01</div><div class="target-arrow">→</div><div class="target-goal">SUB 6:50</div></div>
-    <div class="target-card"><div class="target-label">500M ROW</div><div class="target-current">~1:45</div><div class="target-arrow">→</div><div class="target-goal">SUB 1:38</div></div>
-    <div class="target-card"><div class="target-label">ZONE 2 PACE</div><div class="target-current">5:45/km</div><div class="target-arrow">→</div><div class="target-goal">5:20/KM</div></div>
-  </div>
-  <div class="phase-banner p2" style="margin-top:20px"><div class="phase-icon">🏔️</div><div><div class="phase-title">PHASE 2 — ULTRA TARGETS</div><div class="phase-sub">11 weeks · 12 Sept 2026</div></div></div>
-  <div class="target-grid">
-    <div class="target-card"><div class="target-label">LONGEST RUN</div><div class="target-current">Under 10k</div><div class="target-arrow">→</div><div class="target-goal">30-34 MI</div><div class="target-unit">Pre-race peak</div></div>
-    <div class="target-card"><div class="target-label">WEEKLY MILEAGE</div><div class="target-current">~20 mi</div><div class="target-arrow">→</div><div class="target-goal">45-55 MI</div><div class="target-unit">Peak weeks</div></div>
-    <div class="target-card"><div class="target-label">RACE TARGET</div><div class="target-current">40 miles</div><div class="target-arrow">→</div><div class="target-goal">FINISH</div><div class="target-unit">Off-road · time on feet</div></div>
-    <div class="target-card"><div class="target-label">ULTRA PACE</div><div class="target-current">TBD</div><div class="target-arrow">→</div><div class="target-goal">~12 MIN/MI</div><div class="target-unit">Walk/run strategy</div></div>
-  </div>
-  <div class="alert" style="margin-top:16px"><strong>THE PIVOT:</strong> After Turf Games, you drop the heavy lifting and erg intervals. The strength work becomes maintenance only — bodyweight and light loads to protect joints. All energy goes into building run volume safely. Your aerobic base from Phase 1 will carry over — that Zone 2 work was building your ultra engine the whole time.</div>`;
+(function(){const el=document.getElementById("targets-content");
+el.innerHTML=`
+<div class="phase-banner p1"><div style="font-size:24px">🏋️</div><div><div class="phase-title">PHASE 1 — TURF GAMES</div><div class="phase-sub">10 weeks · Late June 2026</div></div></div>
+<div class="target-grid">
+  <div class="target-card"><div class="target-label">CLEAN & JERK</div><div class="target-current">100 kg</div><div class="target-arrow">→</div><div class="target-goal">115 KG</div></div>
+  <div class="target-card"><div class="target-label">FRONT SQUAT 3RM</div><div class="target-current">100 kg</div><div class="target-arrow">→</div><div class="target-goal">115+ KG</div></div>
+  <div class="target-card"><div class="target-label">5K RUN</div><div class="target-current">22:00</div><div class="target-arrow">→</div><div class="target-goal">SUB 20:00</div></div>
+  <div class="target-card"><div class="target-label">2K ROW</div><div class="target-current">7:01</div><div class="target-arrow">→</div><div class="target-goal">SUB 6:50</div></div>
+  <div class="target-card"><div class="target-label">500M ROW</div><div class="target-current">~1:45</div><div class="target-arrow">→</div><div class="target-goal">SUB 1:38</div></div>
+  <div class="target-card"><div class="target-label">ZONE 2 PACE</div><div class="target-current">5:45/km</div><div class="target-arrow">→</div><div class="target-goal">5:20/KM</div></div>
+</div>
+<div class="phase-banner p2" style="margin-top:20px"><div style="font-size:24px">🏔️</div><div><div class="phase-title">PHASE 2 — ULTRA 40MI</div><div class="phase-sub">11 weeks · 12 Sept 2026</div></div></div>
+<div class="target-grid">
+  <div class="target-card"><div class="target-label">LONGEST RUN</div><div class="target-current">Under 10k</div><div class="target-arrow">→</div><div class="target-goal">30-34 MI</div><div class="target-unit">Peak before taper</div></div>
+  <div class="target-card"><div class="target-label">WEEKLY MILEAGE</div><div class="target-current">~20 mi</div><div class="target-arrow">→</div><div class="target-goal">45-55 MI</div><div class="target-unit">Peak weeks</div></div>
+  <div class="target-card"><div class="target-label">RACE TARGET</div><div class="target-current">40 miles</div><div class="target-arrow">→</div><div class="target-goal">FINISH</div><div class="target-unit">Off-road · time on feet</div></div>
+  <div class="target-card"><div class="target-label">ULTRA PACE</div><div class="target-current">TBD</div><div class="target-arrow">→</div><div class="target-goal">~12 MIN/MI</div><div class="target-unit">Walk/run strategy</div></div>
+</div>
+<div class="alert"><strong>THE PIVOT:</strong> After Turf Games, heavy lifting stops. Strength becomes maintenance — bodyweight and light loads to protect joints. All energy into run volume. Your aerobic base from Phase 1 carries over — that Zone 2 work was building your ultra engine the whole time.</div>`;
 })();
 
 // ─── OVERVIEW ──────────────────────────────
-function renderOverview(){
-  const el=document.getElementById("overview-content");
-  let h=`<div style="font-family:var(--ff-sub);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;color:var(--c-str)">PHASE 1 — TURF GAMES (WEEKS 1-10)</div><div class="overview">`;
-  for(let w=0;w<10;w++){const p=Math.round(weekCompPct(w)*100);const c=getColor(weekCompPct(w));h+=`<div class="ov-card"><div class="ov-wk">TG${w+1}</div><div class="ov-pct" style="color:${p>0?c:'#333'}">${p}%</div><div class="ov-bar-bg"><div class="ov-bar" style="width:${p}%;background:${c}"></div></div></div>`;}
-  h+=`</div><div style="font-family:var(--ff-sub);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin:20px 0 8px;color:var(--c-run)">PHASE 2 — ULTRA 40MI (WEEKS 11-21)</div><div class="overview">`;
-  for(let w=10;w<TOTAL_WEEKS;w++){const p=Math.round(weekCompPct(w)*100);const c=getColor(weekCompPct(w));h+=`<div class="ov-card"><div class="ov-wk">U${w-9}</div><div class="ov-pct" style="color:${p>0?c:'#333'}">${p}%</div><div class="ov-bar-bg"><div class="ov-bar" style="width:${p}%;background:${c}"></div></div></div>`;}
-  h+=`</div>`;
-  el.innerHTML=h;
-}
-// Re-render overview when switching to it
-document.getElementById("nav").addEventListener("click",e=>{const b=e.target.closest("[data-tab='overview']");if(b)setTimeout(renderOverview,10);});
+function renderOverview(){const el=document.getElementById("overview-content");
+let h=`<div style="font-family:var(--ff-sub);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;color:var(--c-str)">PHASE 1 — TURF GAMES</div><div class="overview">`;
+for(let w=0;w<10;w++){const p=Math.round(weekPct(w)*100);const c=getColor(weekPct(w));h+=`<div class="ov-card"><div class="ov-wk">TG${w+1}</div><div class="ov-pct" style="color:${p>0?c:'#333'}">${p}%</div><div class="ov-bar-bg"><div class="ov-bar" style="width:${p}%;background:${c}"></div></div></div>`;}
+h+=`</div><div style="font-family:var(--ff-sub);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin:20px 0 8px;color:var(--c-run)">PHASE 2 — ULTRA 40MI</div><div class="overview">`;
+for(let w=10;w<TW;w++){const p=Math.round(weekPct(w)*100);const c=getColor(weekPct(w));h+=`<div class="ov-card"><div class="ov-wk">U${w-9}</div><div class="ov-pct" style="color:${p>0?c:'#333'}">${p}%</div><div class="ov-bar-bg"><div class="ov-bar" style="width:${p}%;background:${c}"></div></div></div>`;}
+h+=`</div>`;el.innerHTML=h;}
 renderOverview();
 
-// ─── TRAINING LOG ──────────────────────────
-const LOG_FIELDS=[
-  {key:"lifts",label:"Lift numbers (C&J, squat, bench — weight x reps)",ml:true},
-  {key:"run",label:"Run sessions (distance, time, pace, how it felt)",ml:true},
-  {key:"erg",label:"Erg numbers (splits, distance, intervals)",ml:true},
-  {key:"bodyweight",label:"Bodyweight (kg)",ml:false},
-  {key:"sleep",label:"Average sleep this week (hours)",ml:false},
-  {key:"energy",label:"Energy level (1–10)",ml:false},
-  {key:"soreness",label:"Soreness / niggles",ml:true},
-  {key:"notes",label:"General notes",ml:true},
-];
-function renderLogWeekSel(){const el=document.getElementById("log-wk-sel");el.innerHTML="";for(let i=0;i<TOTAL_WEEKS;i++){const has=logData[i]&&Object.values(logData[i]).some(v=>v);const p2=isPhase2(i);const cls=i===logWeek?"active":has?"has-data":"";const label=p2?`U${i-9}`:`TG${i+1}`;el.innerHTML+=`<button class="wk-btn ${cls} ${p2?"phase2":""}" data-lw="${i}">${label}</button>`;}}
-function renderLog(){const el=document.getElementById("log-form");el.innerHTML="";const wd=logData[logWeek]||{};LOG_FIELDS.forEach(f=>{const v=(wd[f.key]||"").replace(/"/g,"&quot;");if(f.ml){el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><textarea class="form-textarea" rows="3" data-lf="${f.key}">${wd[f.key]||""}</textarea></div>`;}else{el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><input class="form-input" type="text" value="${v}" data-lf="${f.key}"></div>`;}});}
-document.getElementById("log-wk-sel").addEventListener("click",e=>{const b=e.target.closest(".wk-btn");if(!b)return;logWeek=+b.dataset.lw;renderLogWeekSel();renderLog();});
-document.getElementById("log-form").addEventListener("input",e=>{const f=e.target.dataset.lf;if(!f)return;if(!logData[logWeek])logData[logWeek]={};logData[logWeek][f]=e.target.value;sv(LK,logData);renderLogWeekSel();});
-renderLogWeekSel();renderLog();
+// ─── LOG ───────────────────────────────────
+const LF=[{key:"lifts",label:"Lift numbers (C&J, squat, bench — weight x reps)",ml:true},{key:"run",label:"Run sessions (distance, time, pace, feel)",ml:true},{key:"erg",label:"Erg numbers (splits, intervals, tests)",ml:true},{key:"bw",label:"Bodyweight (kg)",ml:false},{key:"sleep",label:"Avg sleep (hours)",ml:false},{key:"energy",label:"Energy (1–10)",ml:false},{key:"soreness",label:"Soreness / niggles",ml:true},{key:"notes",label:"Notes",ml:true}];
+function renderLogSel(){const el=document.getElementById("log-wk-sel");el.innerHTML="";for(let i=0;i<TW;i++){const has=logData[i]&&Object.values(logData[i]).some(v=>v);const p2=isP2(i);const cls=i===logWeek?"active":has?"has-data":"";const label=p2?`U${i-9}`:`TG${i+1}`;el.innerHTML+=`<button class="wk-btn ${cls} ${p2?"phase2":""}" data-lw="${i}">${label}</button>`;}}
+function renderLog(){const el=document.getElementById("log-form");el.innerHTML="";const wd=logData[logWeek]||{};LF.forEach(f=>{const v=(wd[f.key]||"").replace(/"/g,"&quot;");if(f.ml){el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><textarea class="form-textarea" rows="3" data-lf="${f.key}">${wd[f.key]||""}</textarea></div>`;}else{el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><input class="form-input" type="text" value="${v}" data-lf="${f.key}"></div>`;}});}
+document.getElementById("log-wk-sel").addEventListener("click",e=>{const b=e.target.closest(".wk-btn");if(!b)return;logWeek=+b.dataset.lw;renderLogSel();renderLog();});
+document.getElementById("log-form").addEventListener("input",e=>{const f=e.target.dataset.lf;if(!f)return;if(!logData[logWeek])logData[logWeek]={};logData[logWeek][f]=e.target.value;sv(LK,logData);renderLogSel();});
+renderLogSel();renderLog();
 </script>
 </body>
 </html>
