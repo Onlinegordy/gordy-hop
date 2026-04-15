@@ -65,6 +65,11 @@
 .form-label{display:block;font-family:var(--ff-sub);font-size:11px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
 .form-input,.form-textarea{width:100%;padding:12px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--border);color:var(--white);font-size:14px;font-family:var(--ff-body);outline:none;transition:border-color 0.2s}
 .form-input:focus,.form-textarea:focus{border-color:rgba(224,64,208,0.4)}.form-textarea{resize:vertical}.form-group{margin-bottom:12px}
+.sess-log{margin-top:8px;padding-top:8px;border-top:1px solid #1a1a1a}
+.sess-log-label{font-family:var(--ff-sub);font-size:10px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
+.sess-log-input{width:100%;padding:8px 12px;border-radius:6px;background:var(--bg);border:1px solid #1a1a1a;color:var(--t1);font-size:13px;font-family:var(--ff-body);outline:none;transition:border-color 0.2s;resize:none}
+.sess-log-input:focus{border-color:rgba(224,64,208,0.3)}
+.sess-log-input::placeholder{color:var(--t5)}
 .footer{text-align:center;padding:16px 20px 28px;font-family:var(--ff-sub);font-size:10px;color:var(--t6);letter-spacing:0.06em;text-transform:uppercase;border-top:1px solid var(--surface);line-height:2}
 @media(max-width:600px){.main-title{font-size:32px}.h2{font-size:24px}.target-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -80,7 +85,7 @@
   <button class="nav-btn active" data-tab="week">THIS WEEK</button>
   <button class="nav-btn" data-tab="targets">TARGETS</button>
   <button class="nav-btn" data-tab="overview">OVERVIEW</button>
-  <button class="nav-btn" data-tab="log">TRAINING LOG</button>
+  <button class="nav-btn" data-tab="log">REFLECTION</button>
 </div></nav>
 <div class="container">
 <div class="section active" id="sec-week">
@@ -101,8 +106,8 @@
   <div id="overview-content"></div>
 </div>
 <div class="section" id="sec-log">
-  <h2 class="h2">TRAINING LOG</h2>
-  <p class="p-intro">Record your numbers. Lifts, times, distances, how you felt.</p>
+  <h2 class="h2">WEEKLY REFLECTION</h2>
+  <p class="p-intro">End of week check-in. Your session numbers are logged inline — this is for the bigger picture.</p>
   <div class="wk-sel" id="log-wk-sel"></div>
   <div id="log-form"></div>
 </div>
@@ -111,10 +116,10 @@
 
 <script>
 const TW=21;
-const SK="gordy2-sess",LK="gordy2-log";
+const SK="gordy2-sess",LK="gordy2-log",NK="gordy2-notes";
 const ld=k=>{try{return JSON.parse(localStorage.getItem(k))||{};}catch{return {};}};
 const sv=(k,d)=>{try{localStorage.setItem(k,JSON.stringify(d));}catch{}};
-let sessData=ld(SK),logData=ld(LK);
+let sessData=ld(SK),logData=ld(LK),notesData=ld(NK);
 let curWeek=0,logWeek=0;
 function isP2(w){return w>=10;}
 function getColor(p){return p>=1?"#22c55e":p>=0.7?"#22c55e":p>=0.4?"#FFB020":"#ef4444";}
@@ -354,8 +359,18 @@ function renderSessions(){
     if(d.note)h+=`<div class="day-note">${d.note}</div>`;
     d.parts.forEach((p,pi)=>{
       const key=curWeek+"-"+di+"-"+pi;const done=sessData[key];
+      const noteKey=curWeek+"-"+di+"-"+pi;
+      const noteVal=(notesData[noteKey]||"").replace(/"/g,"&quot;");
+      const placeholder=p.title.includes("SQUAT")?"e.g. Hit 87.5 x 3 all sets. Felt heavy on rep 3."
+        :p.title.includes("CLEAN")?"e.g. 85kg x 2 felt smooth. Missed jerk at 90."
+        :p.title.includes("RUN")||p.title.includes("AEROBIC")||p.title.includes("STEADY")||p.title.includes("TEMPO")?"e.g. 5k in 21:30, avg pace 4:18/km. Legs felt good."
+        :p.title.includes("ERG")?"e.g. 6x500m — 1:46, 1:45, 1:45, 1:44, 1:45, 1:44. Felt strong."
+        :p.title.includes("BENCH")||p.title.includes("UPPER")?"e.g. Bench 80kg x 5 all sets. Pull-ups +10kg x 6."
+        :p.title.includes("LONG RUN")||p.title.includes("KEY")?"e.g. 16 mi in 2:08. Walked last 2 hills. Gel every 45 min worked."
+        :"What did you actually do? Numbers, times, how it felt.";
       h+=`<div class="sess-part"><div class="sess-part-header"><div><span class="sess-part-title">${p.title}</span><span class="sess-part-tag" style="margin-left:8px">${p.tag}</span></div><button class="tick-btn ${done?"on":""}" data-di="${di}" data-pi="${pi}">${done?"✓":""}</button></div>`;
       p.items.forEach(item=>{h+=`<div class="ex-row">${item}</div>`;});
+      h+=`<div class="sess-log"><div class="sess-log-label">YOUR NUMBERS</div><textarea class="sess-log-input" rows="2" data-ndi="${di}" data-npi="${pi}" placeholder="${placeholder}">${notesData[noteKey]||""}</textarea></div>`;
       h+=`</div>`;
     });
     h+=`</div>`;
@@ -365,6 +380,7 @@ function renderSessions(){
 function renderWeek(){renderWeekSel();renderPhaseBanner();renderSessions();}
 document.getElementById("week-sel").addEventListener("click",e=>{const b=e.target.closest(".wk-btn");if(!b)return;curWeek=+b.dataset.cw;renderWeek();});
 document.getElementById("week-sessions").addEventListener("click",e=>{const b=e.target.closest(".tick-btn");if(!b)return;const k=curWeek+"-"+b.dataset.di+"-"+b.dataset.pi;sessData[k]=!sessData[k];sv(SK,sessData);renderWeek();});
+document.getElementById("week-sessions").addEventListener("input",e=>{const t=e.target;if(!t.classList.contains("sess-log-input"))return;const k=curWeek+"-"+t.dataset.ndi+"-"+t.dataset.npi;notesData[k]=t.value;sv(NK,notesData);});
 renderWeek();
 
 // ─── TARGETS ───────────────────────────────
@@ -399,7 +415,7 @@ h+=`</div>`;el.innerHTML=h;}
 renderOverview();
 
 // ─── LOG ───────────────────────────────────
-const LF=[{key:"lifts",label:"Lift numbers (C&J, squat, bench — weight x reps)",ml:true},{key:"run",label:"Run sessions (distance, time, pace, feel)",ml:true},{key:"erg",label:"Erg numbers (splits, intervals, tests)",ml:true},{key:"bw",label:"Bodyweight (kg)",ml:false},{key:"sleep",label:"Avg sleep (hours)",ml:false},{key:"energy",label:"Energy (1–10)",ml:false},{key:"soreness",label:"Soreness / niggles",ml:true},{key:"notes",label:"Notes",ml:true}];
+const LF=[{key:"wins",label:"Biggest wins this week",ml:true},{key:"pbs",label:"Any PBs or numbers to note",ml:true},{key:"missed",label:"What got missed and why",ml:true},{key:"bw",label:"Bodyweight (kg)",ml:false},{key:"sleep",label:"Avg sleep (hours)",ml:false},{key:"energy",label:"Energy (1–10)",ml:false},{key:"soreness",label:"Soreness / niggles to watch",ml:true},{key:"next",label:"Focus for next week",ml:true}];
 function renderLogSel(){const el=document.getElementById("log-wk-sel");el.innerHTML="";for(let i=0;i<TW;i++){const has=logData[i]&&Object.values(logData[i]).some(v=>v);const p2=isP2(i);const cls=i===logWeek?"active":has?"has-data":"";const label=p2?`U${i-9}`:`TG${i+1}`;el.innerHTML+=`<button class="wk-btn ${cls} ${p2?"phase2":""}" data-lw="${i}">${label}</button>`;}}
 function renderLog(){const el=document.getElementById("log-form");el.innerHTML="";const wd=logData[logWeek]||{};LF.forEach(f=>{const v=(wd[f.key]||"").replace(/"/g,"&quot;");if(f.ml){el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><textarea class="form-textarea" rows="3" data-lf="${f.key}">${wd[f.key]||""}</textarea></div>`;}else{el.innerHTML+=`<div class="form-group"><label class="form-label">${f.label}</label><input class="form-input" type="text" value="${v}" data-lf="${f.key}"></div>`;}});}
 document.getElementById("log-wk-sel").addEventListener("click",e=>{const b=e.target.closest(".wk-btn");if(!b)return;logWeek=+b.dataset.lw;renderLogSel();renderLog();});
